@@ -23,4 +23,9 @@ getElementById("card-parent").addEventListener("click", function (e) {
     getElementById("copy-count").innerText = copyCount += 1;
     return alert(`copy successfully! ${phoneNumber}`);
   }
+  // heart count innerText to number convert
+  if (e.target.className.includes("heart-count")) {
+    let heartCount = Number(getElementById("heart-count").innerText);
+    getElementById("heart-count").innerText = heartCount += 1;
+  }
 });

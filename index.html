@@ -20,10 +20,104 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
+  <!-- daisy ui cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- tailwind cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-primary: #006747;
+        --color-bannerTitle: #ffffff;
+        --color-icons: #ffe3e2;
+        --color-btn: #00a63e;
+        --color-background: #f5fff6;
+        --font-inter: "Inter", sans-serif;
+      }
+    </style>
   </head>
-  <body>
+  <body class="font-inter">
     <header>
-        
+<!-- nav section start here -->
+    <nav class="max-w-7xl mx-auto px-4 lg:px-0">
+        <div class="navbar justify-between bg-base-100">
+          <div class="flex items-center gap-2">
+            <img
+              title="Emergency Service"
+              class="max-w-16 cursor-pointer"
+              src="./assets/logo.png"
+              alt=""
+            />
+            <h3
+              class="text-2xl md:flex leading-7 font-semibold max-w-[10ch] text-primary"
+            >
+              Emergency Service
+            </h3>
+          </div>
+          <div>
+            <ul class="menu hidden md:flex menu-horizontal space-x-8">
+              <div class="flex items-center gap-2 btn bg-green-100 rounded-full">
+                <span class="text-xl font-medium" id="heart-count">0</span>
+                <img class="max-w-8" src="./assets/heart.png" alt="" />
+              </div>
+              <div class="flex items-center gap-2 btn bg-green-100 rounded-full">
+                <span class="text-xl font-medium" id="coin-decrement">100</span>
+                <img class="max-w-8" src="./assets/coin.png" alt="" />
+              </div>
+              <div>
+                <button class="btn bg-btn text-bannerTitle rounded-full">
+                  <span id="copy-count">0</span> Copy
+                </button>
+              </div>
+            </ul>
+            <div class="dropdown dropdown-left">
+              <div tabindex="0" role="button" class="md:hidden">
+                <i class="fa-solid fa-bars text-xl"></i>
+              </div>
+              <ul
+                tabindex="0"
+                class="flex justify-between menu-sm dropdown-content rounded bg-base-100 -mr-6 z-10 mt-12 w-72 p-3 shadow"
+              >
+               <div class="flex items-center gap-2">
+                <span class="text-xl font-medium" id="heart-count">0</span>
+                <img class="max-w-8" src="./assets/heart.png" alt="" />
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-xl font-medium" id="coin-decrement">100</span>
+                <img class="max-w-8" src="./assets/coin.png" alt="" />
+              </div>
+              <div>
+                <button class="btn bg-btn text-bannerTitle rounded-full">
+                  <span id="copy-count">0</span> Copy
+                </button>
+              </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </nav>
+<!-- nav section ended here -->
+<!-- banner section start -->
+      <section
+        class="h-70 md:h-54 flex items-center justify-center bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223]"
+      >
+        <div class="text-center space-y-3">
+          <img class="max-w-24 mx-auto" src="./assets/logo.png" alt="" />
+          <h1 class="text-2xl font-semibold text-bannerTitle">
+            Emergency Service Directory
+          </h1>
+          <p class="text-bannerTitle">
+            Government Emergency Services at Your Fingertip – A Project by
+            Government of the People’s Republic of Bangladesh
+          </p>
+        </div>
+      </section>
+<!-- banner section end -->
     </header>
+    <script src="script/script.js"></script>
   </body>
 </html>

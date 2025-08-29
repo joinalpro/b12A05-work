@@ -28,4 +28,23 @@ getElementById("card-parent").addEventListener("click", function (e) {
     let heartCount = Number(getElementById("heart-count").innerText);
     getElementById("heart-count").innerText = heartCount += 1;
   }
+  // call button history
+  if (e.target.className.includes("call-btn")) {
+    if (Number(cardGetElementById("coin-decrement").innerText) <= 0) {
+      return alert("No available coin, minimum 20 coin required!");
+    }
+    const coin = Number(cardGetElementById("coin-decrement").innerText) - 20;
+    cardGetElementById("coin-decrement").innerText = coin;
+    alert(`${title} ${phoneNumber}...`);
+    allHistory.innerHTML = `
+        <div class="bg-[#fafafa] p-3 rounded-lg space-y-1">
+        <h4 class="text-gray-600 text-lg">${title}</h4>
+        <div class="flex items-center justify-between">
+        <p class="text-lg text-gray-500">${phoneNumber}</p>
+        <p>${date}</p>
+        </div>
+    </div>
+    `;
+    rigthSideCallHistory.appendChild(allHistory);
+  }
 });

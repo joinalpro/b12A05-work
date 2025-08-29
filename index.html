@@ -3,24 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Emergency Service Work</title>
-      <!-- daisy UI CDN -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@5"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
-  <!-- font Awesome cdn -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-  <!-- daisy ui cdn -->
+    <title>Emergency Service</title>
+    <!-- fontwesome cdn -->
+    <script
+      src="https://kit.fontawesome.com/abe88cc625.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- daisy ui cdn -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
@@ -42,8 +31,8 @@
   </head>
   <body class="font-inter">
     <header>
-<!-- nav section start here -->
-    <nav class="max-w-7xl mx-auto px-4 lg:px-0">
+      <!-- nav section start -->
+      <nav class="max-w-7xl mx-auto px-4 lg:px-0">
         <div class="navbar justify-between bg-base-100">
           <div class="flex items-center gap-2">
             <img
@@ -60,11 +49,11 @@
           </div>
           <div>
             <ul class="menu hidden md:flex menu-horizontal space-x-8">
-              <div class="flex items-center gap-2 btn bg-green-100 rounded-full">
+              <div class="flex items-center gap-2">
                 <span class="text-xl font-medium" id="heart-count">0</span>
                 <img class="max-w-8" src="./assets/heart.png" alt="" />
               </div>
-              <div class="flex items-center gap-2 btn bg-green-100 rounded-full">
+              <div class="flex items-center gap-2">
                 <span class="text-xl font-medium" id="coin-decrement">100</span>
                 <img class="max-w-8" src="./assets/coin.png" alt="" />
               </div>
@@ -82,26 +71,29 @@
                 tabindex="0"
                 class="flex justify-between menu-sm dropdown-content rounded bg-base-100 -mr-6 z-10 mt-12 w-72 p-3 shadow"
               >
-               <div class="flex items-center gap-2">
-                <span class="text-xl font-medium" id="heart-count">0</span>
-                <img class="max-w-8" src="./assets/heart.png" alt="" />
-              </div>
-              <div class="flex items-center gap-2">
-                <span class="text-xl font-medium" id="coin-decrement">100</span>
-                <img class="max-w-8" src="./assets/coin.png" alt="" />
-              </div>
-              <div>
-                <button class="btn bg-btn text-bannerTitle rounded-full">
-                  <span id="copy-count">0</span> Copy
-                </button>
-              </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-xl font-medium" id="heart-count">0</span>
+                  <img class="max-w-8" src="./assets/heart.png" alt="" />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-xl font-medium" id="coin-decrement"
+                    >100</span
+                  >
+                  <img class="max-w-8" src="./assets/coin.png" alt="" />
+                </div>
+                <div>
+                  <button class="btn bg-btn text-bannerTitle rounded-full">
+                    <span id="copy-count">0</span> Copy
+                  </button>
+                </div>
               </ul>
             </div>
           </div>
         </div>
-    </nav>
-<!-- nav section ended here -->
-<!-- banner section start -->
+      </nav>
+      <!-- nav section end -->
+
+      <!-- banner section start -->
       <section
         class="h-70 md:h-54 flex items-center justify-center bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223]"
       >
@@ -116,10 +108,10 @@
           </p>
         </div>
       </section>
-<!-- banner section end -->
+      <!-- banner section end -->
     </header>
-<main class="bg-background py-10">
- <section class="max-w-7xl mx-auto px-4 lg:px-0">
+    <main class="bg-background py-10">
+      <section class="max-w-7xl mx-auto px-4 lg:px-0">
         <div class="grid md:grid-cols-2 lg:grid-cols-12 gap-4">
           <div
             id="card-parent"
@@ -245,7 +237,7 @@
               <div class="px-5 space-y-2 py-3">
                 <h2 class="text-xl">Ambulance</h2>
                 <p class="text-gray-500">Ambulance Service Number</p>
-                <h4 class="text-4xl font-medium">1994-999</h4>
+                <h4 class="text-4xl font-medium">1994-9999999</h4>
                 <button
                   class="bg-gray-100 px-6 py-1 rounded-full text-gray-500"
                 >
@@ -270,7 +262,7 @@
               <figure class="p-5 flex items-center justify-between">
                 <img
                   class="max-w-12 bg-[#DFEFFF] p-2 rounded-xl"
-                  src="./assets/Bangladesh-Railway.png"
+                  src="./assets/relway.png"
                   alt="Shoes"
                 />
                 <i
@@ -420,7 +412,7 @@
               <div class="px-5 space-y-2 py-3">
                 <h2 class="text-xl">Ambulance</h2>
                 <p class="text-gray-500">Ambulance Service Number</p>
-                <h4 class="text-4xl font-medium">1994-999</h4>
+                <h4 class="text-4xl font-medium">1994-9999999</h4>
                 <button
                   class="bg-gray-100 px-6 py-1 rounded-full text-gray-500"
                 >
@@ -455,12 +447,13 @@
                   Clear
                 </button>
               </div>
-              <div id="call-history-container" class="space-y-3"></div>
+              <div id="rigth-side-call-history" class="space-y-3"></div>
             </div>
           </div>
         </div>
       </section>
-</main>
+    </main>
+    <!-- add script -->
     <script src="./script/script.js"></script>
   </body>
 </html>

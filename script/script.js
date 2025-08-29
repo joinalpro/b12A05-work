@@ -1,13 +1,14 @@
-function getElementById(id) {
-  const element = document.getElementById(id);
-  return element;
+function cardGetElementById(id) {
+  return document.getElementById(id);
 }
 
-getElementById("card-parent").addEventListener("click", function (e) {
-  const callHistory = getElementById("call-history-container");
+cardGetElementById("card-parent").addEventListener("click", function (e) {
+  const rigthSideCallHistory = cardGetElementById("rigth-side-call-history");
   const allHistory = document.createElement("div");
+
   // convert date
   const date = new Date().toLocaleTimeString();
+
   // dynamic title
   const title =
     e.target.parentNode.parentNode.parentNode?.children[1]?.children[1]
@@ -19,14 +20,15 @@ getElementById("card-parent").addEventListener("click", function (e) {
 
   // copy count innerText to number convert
   if (e.target.className.includes("copy-btn")) {
-    let copyCount = Number(getElementById("copy-count").innerText);
-    getElementById("copy-count").innerText = copyCount += 1;
+    let copyCount = Number(cardGetElementById("copy-count").innerText);
+    cardGetElementById("copy-count").innerText = copyCount += 1;
     return alert(`copy successfully! ${phoneNumber}`);
   }
+
   // heart count innerText to number convert
   if (e.target.className.includes("heart-count")) {
-    let heartCount = Number(getElementById("heart-count").innerText);
-    getElementById("heart-count").innerText = heartCount += 1;
+    let heartCount = Number(cardGetElementById("heart-count").innerText);
+    cardGetElementById("heart-count").innerText = heartCount += 1;
   }
   // call button history
   if (e.target.className.includes("call-btn")) {
@@ -47,4 +49,8 @@ getElementById("card-parent").addEventListener("click", function (e) {
     `;
     rigthSideCallHistory.appendChild(allHistory);
   }
+});
+
+cardGetElementById("clear-btn").addEventListener("click", function () {
+  cardGetElementById("rigth-side-call-history").innerHTML = "";
 });
